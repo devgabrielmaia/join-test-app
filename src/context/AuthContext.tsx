@@ -74,7 +74,6 @@ const AuthProvider = ({ children }: Props) => {
   }, [])
 
   const handleLogin = (params: LoginParams, errorCallback?: ErrCallbackType) => {
-    console.log(apiConfig.baseURL + apiConfig.login)
     axios
       .post(apiConfig.baseURL + apiConfig.login, params)
       .then(async response => {
@@ -93,7 +92,6 @@ const AuthProvider = ({ children }: Props) => {
         router.replace(redirectURL as string)
       })
       .catch(err => {
-        console.log(err)
         if (errorCallback) errorCallback(err)
       })
   }

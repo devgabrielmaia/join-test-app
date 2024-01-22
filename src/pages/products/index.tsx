@@ -22,7 +22,6 @@ export default function Products() {
   const handleClickOpenModalEditing = (id: number | null = null) => {
     setOpenModalEditing(true);
     if (!id) {
-      console.log('Create new product')
       setProductToEdit(null);
       setProductToDelete(null)
       return;
